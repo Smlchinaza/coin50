@@ -1,0 +1,104 @@
+* {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: 'Archivo Black';
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+@keyframes customBounce {
+    30% {
+        transform: scale(1.2);
+    }
+
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.about-logos {
+    animation: customBounce 1.5s infinite;
+}
+.w-full button:hover .svgg path {
+    fill: black;
+}
+
+.icon-container {
+    display: flex;
+    gap: 30px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #2a76c4;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.2s ease;
+}
+
+.icon img {
+    width: 24px; /* Adjust based on icon size */
+    height: 24px;
+    color: black;
+    filter: invert(1); /* makes the icon white, works if the icon is black by default */
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+.nav-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other content */
+    background-color: rgb(13, 17, 49); /* Ensure a background color to make it visible */
+}
+
+/* Partner styling */
+.partner-button {
+    display: block;
+    padding: 15px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0088cc;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.partner-button:hover {
+    transform: scale(1.05);
+    background-color: #8a2be2;
+}
